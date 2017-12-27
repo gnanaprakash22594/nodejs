@@ -1,15 +1,28 @@
 console.log('starting app.js')
 
-const express = require('express');
-const app = express();
+var connect = require('connect');
+var express = require('express');
+var app = express();
 
-app.get('/', function(req, res) {
-	res.send('Hello World');
-});
+var myLogger = function(req, res, next) {
+    console.log('Logged');
+    next();
+}
+
+var requestTime = function(req, res, next){
+    req.requestTime = (new Date).getTime();
+    next();
+}
+
+
+app.use('/echo/ontro', function (req, res, next) {
+    console.log('Request URL:', req.originalUrl)
+    next();
+  });
 
 
 app.get('/echo/ontro', function(req, res) {
-    res.send('ontro');
+    console.log('Hello World');
 });
 
 app.listen(3000);
