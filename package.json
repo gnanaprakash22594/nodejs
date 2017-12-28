@@ -14,5 +14,13 @@
     "nodemon": "^1.14.3",
     "request": "^2.83.0",
     "response-time": "^2.3.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnanaprakash22594/nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gnanaprakash22594/nodejs/issues"
+  },
+  "homepage": "https://github.com/gnanaprakash22594/nodejs#readme"
 }
